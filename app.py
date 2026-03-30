@@ -1,25 +1,24 @@
 """
-Selected Work Samples — APAC Content Analytics
+Xinran Li — APAC Content Analytics Portfolio
 """
 
 import streamlit as st
 
 st.set_page_config(
-    page_title="Xinran Li — Selected Work Samples",
+    page_title="Xinran Li — APAC Content Analytics Portfolio",
     page_icon="📊",
     layout="wide",
 )
 
-# ── Custom CSS ───────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-    .block-container { max-width: 1200px; padding-top: 2rem; }
+    .block-container { max-width: 1100px; padding-top: 2rem; }
     .project-card {
         background: #f8f9fa;
         border-radius: 12px;
         padding: 1.5rem;
         border: 1px solid #e9ecef;
-        min-height: 160px;
+        min-height: 150px;
     }
     .project-card h3 { margin-top: 0; font-size: 1.1rem; }
     .project-card p { font-size: 0.9rem; color: #495057; }
@@ -32,46 +31,61 @@ st.markdown("""
         font-size: 0.75rem;
         color: #495057;
     }
-    .placeholder-card {
-        background: #f8f9fa;
-        border-radius: 12px;
-        padding: 1.5rem;
-        border: 2px dashed #dee2e6;
-        min-height: 160px;
-    }
-    .placeholder-card h3 { margin-top: 0; font-size: 1.1rem; color: #adb5bd; }
-    .placeholder-card p { font-size: 0.9rem; color: #adb5bd; }
+    .hero-subtitle { font-size: 1.05rem; color: #495057; line-height: 1.7; }
+    .start-box { background: #f0f4ff; border-radius: 10px; padding: 1.2rem; border: 1px solid #d0daf0; }
 </style>
 """, unsafe_allow_html=True)
 
-# ── Header ───────────────────────────────────────────────────────────────────
-st.markdown("# Selected Work Samples")
-st.markdown("##### Strategy & Analytics — APAC Content Markets")
+# ── Hero ─────────────────────────────────────────────────────────────────────
+st.markdown("# Xinran Li")
+st.markdown("##### APAC Content Analytics — Public-Data Work Samples")
 
-st.markdown(
-    "These work samples explore core content analytics questions: "
-    "how APAC market structure shapes streaming competition, how content "
-    "investment can be discussed under incomplete data, and how analytical "
-    "frameworks bridge global assumptions with local market realities."
-)
+st.markdown("""
+<p class="hero-subtitle">
+Strategy and analytics professional with experience at Apple and Accenture.
+These work samples demonstrate how APAC streaming competition and content
+investment can be analyzed using only public, external data — and where
+internal data would improve the analysis.
+</p>
+""", unsafe_allow_html=True)
 
 st.markdown("")
 
+# ── Start Here ───────────────────────────────────────────────────────────────
+st.markdown("""
+<div class="start-box">
+<strong>If you have 30 seconds:</strong> Open Project A → Executive Summary tab.<br>
+<strong>If you have 5 minutes:</strong> Read both Executive Summaries, then the Strategic Implications tabs.<br>
+<strong>What these projects answer:</strong><br>
+&nbsp;&nbsp;A — What does APAC streaming competition actually look like beyond SVOD rivalry?<br>
+&nbsp;&nbsp;B — How can content investment be discussed when precise internal data isn't available?<br>
+<strong>Method:</strong> Public market data, transparent assumptions, documented scoring rationale.<br>
+<strong>Key caveat:</strong> External data only. All limitations are stated upfront.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("")
+st.divider()
+
 # ── Project Cards ────────────────────────────────────────────────────────────
-col1, col2, col3 = st.columns(3, gap="medium")
+col1, col2 = st.columns(2, gap="large")
 
 with col1:
     st.markdown("""
 <div class="project-card">
 <h3>📊 APAC Streaming Competitive Intelligence</h3>
-<p>Three-layer competitive framework for Japan & Korea — premium SVOD, free/ad-supported streaming, and YouTube/UGC attention competition.</p>
+<p>Three-layer competitive framework for Japan & Korea comparing premium SVOD,
+free/ad-supported streaming, and YouTube/UGC attention competition.</p>
 </div>
 """, unsafe_allow_html=True)
 
     st.markdown("""
-- Mapped **20 platforms** across three competition layers
-- Scored competitive pressure with **documented rationale**
-- Surfaced APAC dynamics global frameworks underweight
+**Business question:** What competitive pressures matter most in each market,
+and where do global streaming frameworks underweight APAC-specific dynamics?
+
+- Mapped **20 platforms** across three competition layers in two markets
+- Scored competitive pressure on three dimensions with **sub-signal decomposition** and documented rationale
+- Every data point tagged with **source, date, and confidence tier**
 """)
 
     st.markdown(
@@ -82,21 +96,28 @@ with col1:
         unsafe_allow_html=True)
 
     st.markdown("")
-    st.link_button("🔗 Live Dashboard", "https://apac-streaming-c-8peixzfcwmsgthjnafktgn.streamlit.app/", use_container_width=True)
-    st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/apac-streaming-ci", use_container_width=True)
+    c1a, c1b = st.columns(2)
+    with c1a:
+        st.link_button("🔗 Live Dashboard", "https://apac-streaming-c-8peixzfcwmsgthjnafktgn.streamlit.app/", use_container_width=True)
+    with c1b:
+        st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/apac-streaming-ci", use_container_width=True)
 
 with col2:
     st.markdown("""
 <div class="project-card">
 <h3>🎬 Japan Content Investment Efficiency</h3>
-<p>Framework for discussing content investment using public engagement data, transparent cost proxies, and metrics for efficiency, export value, and portfolio role.</p>
+<p>Framework for comparing Japanese content types on viewing efficiency,
+export value, and portfolio role using Netflix public engagement data.</p>
 </div>
 """, unsafe_allow_html=True)
 
     st.markdown("""
-- Analyzed **27 Japanese titles** across anime, drama, film, reality
-- Designed **three content metrics** with transparent assumptions
-- Produced strategic implications for investment discussion
+**Business question:** Which Japanese content types generate the most
+viewing per estimated cost, and which travel beyond Japan?
+
+- Analyzed **21 Japanese titles** with defined inclusion criteria (Japan-produced, Japanese-language)
+- Designed **three metrics** (Viewing Efficiency, Export Value, Portfolio Role) with **sensitivity analysis**
+- Export value scored **rule-based** on Global Top 10 weeks, not manual judgment
 """)
 
     st.markdown(
@@ -107,34 +128,11 @@ with col2:
         unsafe_allow_html=True)
 
     st.markdown("")
-    st.link_button("🔗 Live Dashboard", "https://japan-content-efficiency-6hurjz8iuwotjxug83aqb3.streamlit.app/", use_container_width=True)
-    st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/japan-content-efficiency", use_container_width=True)
-
-with col3:
-    st.markdown("""
-<div class="placeholder-card">
-<h3>🔧 Project C — Coming Soon</h3>
-<p>A third analytical work sample is in development. Check back for updates.</p>
-</div>
-""", unsafe_allow_html=True)
-
-    st.markdown("""
-<span style="color: #adb5bd;">
-
-- TBD
-- TBD
-- TBD
-
-</span>
-""", unsafe_allow_html=True)
-
-    st.markdown(
-        '<span class="card-tag" style="opacity:0.4;">TBD</span>',
-        unsafe_allow_html=True)
-
-    st.markdown("")
-    st.button("🔗 Coming Soon", disabled=True, use_container_width=True)
-    st.button("📦 Coming Soon ", disabled=True, use_container_width=True)
+    c2a, c2b = st.columns(2)
+    with c2a:
+        st.link_button("🔗 Live Dashboard", "https://japan-content-efficiency-6hurjz8iuwotjxug83aqb3.streamlit.app/", use_container_width=True)
+    with c2b:
+        st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/japan-content-efficiency", use_container_width=True)
 
 st.markdown("")
 st.divider()
@@ -142,23 +140,17 @@ st.divider()
 # ── How They Connect ─────────────────────────────────────────────────────────
 st.markdown("### How These Projects Fit Together")
 
-c_left, c_right = st.columns([1, 1])
-with c_left:
-    st.markdown("""
-**Project A** → *What does the competitive environment look like?*
-
-Maps the streaming landscape — not just paid rivals, but free ecosystems
-and UGC attention competition that global frameworks often miss.
-""")
-with c_right:
-    st.markdown("""
-**Project B** → *How should content investment be discussed?*
-
-Provides a structured way to compare content types on efficiency, export
-value, and strategic role for slate planning.
+st.markdown("""
+| | Project A | Project B |
+|---|---|---|
+| **Question** | What does the competitive environment look like? | How should content investment be discussed? |
+| **Scope** | Japan + Korea, 20 platforms | Japan, 21 titles across 4 content types |
+| **Method** | Three-layer pressure framework with sub-signals | Viewing efficiency + export value + portfolio role |
+| **Key finding** | Free/UGC pressure is underweighted in Japan; premium rivalry dominates Korea | Anime is the most capital-efficient export vehicle; drama is a local anchor |
+| **Limitation** | Qualitative scoring on public data | Category-level cost proxies, not title-level budgets |
 """)
 
-st.info("Together: **competitive landscape → investment framework → strategic implications**")
+st.info("Together: **competitive landscape → content investment framework → strategic implications**")
 
 st.divider()
 
@@ -178,6 +170,6 @@ with lk3:
 
 st.markdown("")
 st.caption(
-    "All projects use public, external data only with documented assumptions. "
-    "These are analytical frameworks designed for strategy discussion."
+    "All projects use public, external data only. Assumptions and limitations are documented. "
+    "These are analytical frameworks for strategy discussion, not production forecasting systems."
 )

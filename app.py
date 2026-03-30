@@ -38,14 +38,13 @@ st.markdown("""
 
 # ── Hero ─────────────────────────────────────────────────────────────────────
 st.markdown("# Xinran Li")
-st.markdown("##### Content Strategy & Deal Valuation — APAC Streaming Work Samples")
+st.markdown("##### APAC Content Analytics — Public-Data Work Samples")
 
 st.markdown("""
 <p class="hero-subtitle">
 Strategy and analytics professional with experience at Apple and Accenture.
 These work samples demonstrate how APAC streaming competition, content
 investment, launch trajectory, and deal evaluation can be analyzed using only public, external data.
-Built with a focus on content economics and windowing strategy.
 </p>
 """, unsafe_allow_html=True)
 

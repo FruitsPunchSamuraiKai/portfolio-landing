@@ -44,7 +44,7 @@ st.markdown("""
 <p class="hero-subtitle">
 Strategy and analytics professional with experience at Apple and Accenture.
 These work samples demonstrate how APAC streaming competition, content
-investment, and launch trajectory can be analyzed using only public, external data.
+investment, launch trajectory, and deal evaluation can be analyzed using only public, external data.
 </p>
 """, unsafe_allow_html=True)
 
@@ -53,8 +53,8 @@ st.markdown("")
 # ── Start Here ───────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="start-box">
-<strong>If you have 30 seconds:</strong> Open any project → Executive Summary tab.<br>
-<strong>If you have 5 minutes:</strong> Read all three Executive Summaries, then Strategic Implications / JP vs KR tabs.<br>
+<strong>If you have 30 seconds:</strong> Open Project A, B, or C → Executive Summary tab.<br>
+<strong>If you have 5 minutes:</strong> Read the three core projects first, then open the valuation extension.<br>
 <strong>Four questions answered:</strong><br>
 &nbsp;&nbsp;A — What does APAC streaming competition actually look like beyond SVOD rivalry?<br>
 &nbsp;&nbsp;B — How can content investment be discussed when precise internal data isn't available?<br>
@@ -160,28 +160,30 @@ in Japan and Korea Netflix live-action scripted series.</p>
 with col4:
     st.markdown("""
 <div class="project-card">
-<h3>💰 Anime Licensing Valuation</h3>
+<h3>💰 Anime Licensing Valuation Extension</h3>
 <p>Scenario-based breakeven framework for exclusive vs. delayed vs. library
 licensing of Japan-origin anime IP.</p>
 </div>
 """, unsafe_allow_html=True)
 
     st.markdown("""
-**Question:** Under what subscriber impact assumptions does an exclusive deal break even?
+**Question:** Under what subscriber impact assumptions does an exclusive anime deal break even?
 
-- **3 windowing scenarios** with transparent cost assumptions
+- **3 windowing scenarios** with transparent, adjustable cost assumptions
 - **Breakeven frontier** and **tornado sensitivity** analysis
-- Connected to Projects B + C + Economics Note
+- Extends Projects B + C with a forward-looking deal evaluation lens
 """)
 
     st.markdown(
         '<span class="card-tag">Japan</span>'
         '<span class="card-tag">Anime</span>'
-        '<span class="card-tag">Valuation</span>',
+        '<span class="card-tag">Valuation</span>'
+        '<span class="card-tag">Extension</span>',
         unsafe_allow_html=True)
 
     st.markdown("")
     st.link_button("🔗 Calculator", "https://valuation-memo-jbg5yu4zmsapplyskptdcki.streamlit.app/", use_container_width=True)
+    st.link_button("📄 Decision Memo", "https://github.com/FruitsPunchSamuraiKai/valuation-memo/blob/main/docs/valuation_memo.md", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/valuation-memo", use_container_width=True)
 
 st.divider()
@@ -193,10 +195,10 @@ st.markdown("""
 | | Project A | Project B | Project C | Extension |
 |---|---|---|---|---|
 | **Question** | What does the competitive environment look like? | How should content investment be discussed? | Which launch signals matter most? | When does exclusive licensing break even? |
-| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 live-action scripted titles | Japan anime IP, 3 scenarios |
-| **Method** | Three-layer pressure framework | Viewing efficiency + export value | Launch strength + staying power + off-platform | Breakeven analysis + sensitivity |
-| **Key finding** | Free/UGC pressure underweighted in JP; premium rivalry dominates KR | Anime is the most capital-efficient export vehicle | Week-1 alone is misleading; KR launches bigger but decays faster | Exclusivity justified only when both acquisition + retention clear threshold |
-| **Limitation** | Semi-quantitative scoring | Category-level cost proxies | 14-title sample, thresholded Top 10 data | Illustrative assumptions, not actual deal terms |
+| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 live-action scripted titles | Japan-origin anime IP, 3 windowing scenarios |
+| **Method** | Three-layer pressure framework | Viewing efficiency + export value | Launch strength + staying power + off-platform | Breakeven analysis + windowing scenarios + sensitivity |
+| **Key finding** | Free/UGC pressure underweighted in JP; premium rivalry dominates KR | Anime is the most capital-efficient export vehicle | Week-1 alone is misleading; KR launches bigger but decays faster | Base case does not break even; exclusivity requires materially stronger acquisition/retention or a lower fee |
+| **Limitation** | Semi-quantitative scoring | Category-level cost proxies | 14-title sample, thresholded Top 10 data | Illustrative assumptions; subscriber effects and deal terms not observable externally |
 """)
 
 st.info("Together: **market context → investment framework → launch diagnostics → deal evaluation**")

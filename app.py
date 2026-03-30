@@ -147,7 +147,7 @@ st.markdown("""
 | **Scope** | Japan + Korea, 20 platforms | Japan, 21 titles across 4 content types |
 | **Method** | Three-layer pressure framework with sub-signals | Viewing efficiency + export value + portfolio role |
 | **Key finding** | Free/UGC pressure is underweighted in Japan; premium rivalry dominates Korea | Anime is the most capital-efficient export vehicle; drama is a local anchor |
-| **Limitation** | Qualitative scoring on public data | Category-level cost proxies, not title-level budgets |
+| **Limitation** | Semi-quantitative scoring on public data | Category-level cost proxies, not title-level budgets |
 """)
 
 st.info("Together: **competitive landscape → content investment framework → strategic implications**")

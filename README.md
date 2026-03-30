@@ -2,7 +2,7 @@
 
 Entry point for three public-data work samples in APAC streaming and content analytics.
 
-**Live:** [portfolio-landing on Streamlit](https://portfolio-landing-bvfn5kbxbr5n7thfzgpryp.streamlit.app/)
+**Live:** [portfolio-landing on Streamlit](https://portfolio-landing-nbpdkzxdvaqd4cm5bdbqde.streamlit.app/)
 
 ## Projects
 

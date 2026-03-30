@@ -68,8 +68,8 @@ st.markdown("""
 st.markdown("")
 st.divider()
 
-# ── Project Cards ────────────────────────────────────────────────────────────
-col1, col2, col3 = st.columns(3, gap="medium")
+# ── Row 1 ────────────────────────────────────────────────────────────────────
+col1, col2 = st.columns(2, gap="large")
 
 with col1:
     st.markdown("""
@@ -125,6 +125,11 @@ export value, and portfolio role using Netflix engagement data.</p>
     st.link_button("🔗 Dashboard", "https://japan-content-efficiency-6hurjz8iuwotjxug83aqb3.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/japan-content-efficiency", use_container_width=True)
 
+st.markdown("")
+
+# ── Row 2 ────────────────────────────────────────────────────────────────────
+col3, col4 = st.columns(2, gap="large")
+
 with col3:
     st.markdown("""
 <div class="project-card">
@@ -152,12 +157,7 @@ in Japan and Korea Netflix live-action scripted series.</p>
     st.link_button("🔗 Dashboard", "https://launch-health-scorecard-mn8yu4pnfclrl8eaujdnny.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/launch-health-scorecard", use_container_width=True)
 
-st.markdown("")
-
-# ── Extension Card ───────────────────────────────────────────────────────────
-col4a, col4b, col4c = st.columns(3, gap="medium")
-
-with col4a:
+with col4:
     st.markdown("""
 <div class="project-card">
 <h3>💰 Anime Licensing Valuation</h3>
@@ -183,12 +183,6 @@ licensing of Japan-origin anime IP.</p>
     st.markdown("")
     st.link_button("🔗 Calculator", "https://valuation-memo-jbg5yu4zmsapplyskptdcki.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/valuation-memo", use_container_width=True)
-
-with col4b:
-    st.markdown("")
-
-with col4c:
-    st.markdown("")
 
 st.divider()
 

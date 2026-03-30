@@ -161,7 +161,7 @@ st.markdown("""
 | | Project A | Project B | Project C |
 |---|---|---|---|
 | **Question** | What does the competitive environment look like? | How should content investment be discussed? | Which launch signals matter most? |
-| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 titles |
+| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 live-action scripted titles |
 | **Method** | Three-layer pressure framework | Viewing efficiency + export value | Launch strength + staying power + off-platform |
 | **Key finding** | Free/UGC pressure underweighted in JP; premium rivalry dominates KR | Anime is the most capital-efficient export vehicle | Week-1 alone is misleading; KR launches bigger but decays faster |
 | **Limitation** | Semi-quantitative scoring | Category-level cost proxies | 14-title sample, thresholded Top 10 data |

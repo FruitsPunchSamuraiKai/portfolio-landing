@@ -141,7 +141,7 @@ with lk1:
     st.markdown("[github.com/FruitsPunchSamuraiKai](https://github.com/FruitsPunchSamuraiKai)")
 with lk2:
     st.markdown("**LinkedIn**")
-    st.markdown("[linkedin.com/in/xinranli](https://linkedin.com/in/xinranli)")
+    st.markdown("[linkedin.com/in/xinran-li](https://www.linkedin.com/in/xinran-li-090306205/)")
 with lk3:
     st.markdown("**Contact**")
     st.markdown("li1000v2@gmail.com")

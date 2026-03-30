@@ -129,7 +129,7 @@ with col3:
 <div class="project-card">
 <h3>🚀 JP/KR Launch Health Scorecard</h3>
 <p>Title-level diagnostics for early signal vs. staying power
-in Japan and Korea Netflix scripted series.</p>
+in Japan and Korea Netflix live-action scripted series.</p>
 </div>
 """, unsafe_allow_html=True)
 

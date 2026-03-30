@@ -55,10 +55,11 @@ st.markdown("""
 <div class="start-box">
 <strong>If you have 30 seconds:</strong> Open any project → Executive Summary tab.<br>
 <strong>If you have 5 minutes:</strong> Read all three Executive Summaries, then Strategic Implications / JP vs KR tabs.<br>
-<strong>Three questions answered:</strong><br>
+<strong>Four questions answered:</strong><br>
 &nbsp;&nbsp;A — What does APAC streaming competition actually look like beyond SVOD rivalry?<br>
 &nbsp;&nbsp;B — How can content investment be discussed when precise internal data isn't available?<br>
 &nbsp;&nbsp;C — Which public early signals distinguish front-loaded launches from durable performers?<br>
+&nbsp;&nbsp;Ext — Under what assumptions does exclusive anime licensing break even?<br>
 <strong>Method:</strong> Public market data, transparent assumptions, documented scoring rationale.<br>
 <strong>Key caveat:</strong> External data only. All limitations are stated upfront.
 </div>
@@ -152,22 +153,59 @@ in Japan and Korea Netflix live-action scripted series.</p>
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/launch-health-scorecard", use_container_width=True)
 
 st.markdown("")
+
+# ── Extension Card ───────────────────────────────────────────────────────────
+col4a, col4b, col4c = st.columns(3, gap="medium")
+
+with col4a:
+    st.markdown("""
+<div class="project-card">
+<h3>💰 Anime Licensing Valuation</h3>
+<p>Scenario-based breakeven framework for exclusive vs. delayed vs. library
+licensing of Japan-origin anime IP.</p>
+</div>
+""", unsafe_allow_html=True)
+
+    st.markdown("""
+**Question:** Under what subscriber impact assumptions does an exclusive deal break even?
+
+- **3 windowing scenarios** with transparent cost assumptions
+- **Breakeven frontier** and **tornado sensitivity** analysis
+- Connected to Projects B + C + Economics Note
+""")
+
+    st.markdown(
+        '<span class="card-tag">Japan</span>'
+        '<span class="card-tag">Anime</span>'
+        '<span class="card-tag">Valuation</span>',
+        unsafe_allow_html=True)
+
+    st.markdown("")
+    st.link_button("🔗 Calculator", "https://valuation-memo-jbg5yu4zmsapplyskptdcki.streamlit.app/", use_container_width=True)
+    st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/valuation-memo", use_container_width=True)
+
+with col4b:
+    st.markdown("")
+
+with col4c:
+    st.markdown("")
+
 st.divider()
 
 # ── How They Connect ─────────────────────────────────────────────────────────
 st.markdown("### How These Projects Fit Together")
 
 st.markdown("""
-| | Project A | Project B | Project C |
-|---|---|---|---|
-| **Question** | What does the competitive environment look like? | How should content investment be discussed? | Which launch signals matter most? |
-| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 live-action scripted titles |
-| **Method** | Three-layer pressure framework | Viewing efficiency + export value | Launch strength + staying power + off-platform |
-| **Key finding** | Free/UGC pressure underweighted in JP; premium rivalry dominates KR | Anime is the most capital-efficient export vehicle | Week-1 alone is misleading; KR launches bigger but decays faster |
-| **Limitation** | Semi-quantitative scoring | Category-level cost proxies | 14-title sample, thresholded Top 10 data |
+| | Project A | Project B | Project C | Extension |
+|---|---|---|---|---|
+| **Question** | What does the competitive environment look like? | How should content investment be discussed? | Which launch signals matter most? | When does exclusive licensing break even? |
+| **Scope** | JP + KR, 20 platforms | Japan, 21 titles | JP + KR, 14 live-action scripted titles | Japan anime IP, 3 scenarios |
+| **Method** | Three-layer pressure framework | Viewing efficiency + export value | Launch strength + staying power + off-platform | Breakeven analysis + sensitivity |
+| **Key finding** | Free/UGC pressure underweighted in JP; premium rivalry dominates KR | Anime is the most capital-efficient export vehicle | Week-1 alone is misleading; KR launches bigger but decays faster | Exclusivity justified only when both acquisition + retention clear threshold |
+| **Limitation** | Semi-quantitative scoring | Category-level cost proxies | 14-title sample, thresholded Top 10 data | Illustrative assumptions, not actual deal terms |
 """)
 
-st.info("Together: **market context → investment framework → launch health diagnostics**")
+st.info("Together: **market context → investment framework → launch diagnostics → deal evaluation**")
 
 st.divider()
 

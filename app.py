@@ -13,31 +13,26 @@ st.set_page_config(
 st.markdown("""
 <style>
     .block-container { max-width: 1200px; padding-top: 2rem; }
-    .hero-subtitle { font-size: 1.05rem; color: #495057; line-height: 1.7; }
-    .start-box { background: #f0f4ff; border-radius: 10px; padding: 1.2rem; border: 1px solid #d0daf0; font-size: 0.92rem; }
-    .card-box {
+    .project-card {
         background: #f8f9fa;
         border-radius: 12px;
-        padding: 1.4rem;
+        padding: 1.5rem;
         border: 1px solid #e9ecef;
-        height: 580px;
-        display: flex;
-        flex-direction: column;
+        min-height: 130px;
     }
-    .card-box h3 { margin-top: 0; font-size: 1.05rem; }
-    .card-desc { font-size: 0.88rem; color: #495057; min-height: 70px; }
-    .card-question { font-size: 0.88rem; font-weight: 600; margin: 0.5rem 0 0.3rem 0; }
-    .card-bullets { font-size: 0.85rem; min-height: 90px; }
-    .card-tags { margin-top: auto; padding-top: 0.5rem; }
+    .project-card h3 { margin-top: 0; font-size: 1.05rem; min-height: 2.5em; }
+    .project-card p { font-size: 0.88rem; color: #495057; min-height: 4.5em; }
     .card-tag {
         display: inline-block;
         background: #e9ecef;
         border-radius: 4px;
-        padding: 2px 7px;
+        padding: 2px 8px;
         margin: 2px;
         font-size: 0.72rem;
         color: #495057;
     }
+    .hero-subtitle { font-size: 1.05rem; color: #495057; line-height: 1.7; }
+    .start-box { background: #f0f4ff; border-radius: 10px; padding: 1.2rem; border: 1px solid #d0daf0; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -65,76 +60,94 @@ st.markdown("""
 &nbsp;&nbsp;B — How can content investment be discussed when precise internal data isn't available?<br>
 &nbsp;&nbsp;C — Which public early signals distinguish front-loaded launches from durable performers?<br>
 <strong>Method:</strong> Public market data, transparent assumptions, documented scoring rationale.<br>
-<strong>Key caveat:</strong> External data only. All limitations stated upfront.
+<strong>Key caveat:</strong> External data only. All limitations are stated upfront.
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown("")
 st.divider()
 
-# ── Project Cards (HTML for alignment) ───────────────────────────────────────
+# ── Project Cards ────────────────────────────────────────────────────────────
 col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
     st.markdown("""
-<div class="card-box">
-    <h3>📊 APAC Streaming Competitive Intelligence</h3>
-    <div class="card-desc">Three-layer competitive framework for Japan & Korea — premium SVOD, free/ad-supported, and YouTube/UGC attention competition.</div>
-    <div class="card-question">Question: What competitive pressures matter most in each market?</div>
-    <div class="card-bullets">
-        • <strong>20 platforms</strong> across three competition layers<br>
-        • <strong>Sub-signal decomposition</strong> with documented rationale<br>
-        • Source, date, confidence on every data point
-    </div>
-    <div class="card-tags">
-        <span class="card-tag">Japan</span>
-        <span class="card-tag">Korea</span>
-        <span class="card-tag">Competitive Intelligence</span>
-    </div>
+<div class="project-card">
+<h3>📊 APAC Streaming Competitive Intelligence</h3>
+<p>Three-layer competitive framework for Japan & Korea — premium SVOD,
+free/ad-supported, and YouTube/UGC attention competition.</p>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("""
+**Question:** What competitive pressures matter most in each market?
+
+- **20 platforms** across three competition layers
+- **Sub-signal decomposition** with documented rationale
+- Source, date, confidence on every data point
+""")
+
+    st.markdown(
+        '<span class="card-tag">Japan</span>'
+        '<span class="card-tag">Korea</span>'
+        '<span class="card-tag">Competitive Intelligence</span>',
+        unsafe_allow_html=True)
+
+    st.markdown("")
     st.link_button("🔗 Dashboard", "https://apac-streaming-c-8peixzfcwmsgthjnafktgn.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/apac-streaming-ci", use_container_width=True)
 
 with col2:
     st.markdown("""
-<div class="card-box">
-    <h3>🎬 Japan Content Investment Efficiency</h3>
-    <div class="card-desc">Framework for comparing Japanese content types on viewing efficiency, export value, and portfolio role using Netflix engagement data.</div>
-    <div class="card-question">Question: Which content types generate the most viewing per estimated cost?</div>
-    <div class="card-bullets">
-        • <strong>21 titles</strong> with defined inclusion criteria<br>
-        • <strong>Sensitivity analysis</strong> across cost scenarios<br>
-        • Export value <strong>rule-based</strong> on Global Top 10 weeks
-    </div>
-    <div class="card-tags">
-        <span class="card-tag">Japan</span>
-        <span class="card-tag">Content Strategy</span>
-        <span class="card-tag">Investment Framework</span>
-    </div>
+<div class="project-card">
+<h3>🎬 Japan Content Investment Efficiency</h3>
+<p>Framework for comparing Japanese content types on viewing efficiency,
+export value, and portfolio role using Netflix engagement data.</p>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("""
+**Question:** Which content types generate the most viewing per estimated cost?
+
+- **21 titles** with defined inclusion criteria
+- **Sensitivity analysis** across cost scenarios
+- Export value **rule-based** on Global Top 10 weeks
+""")
+
+    st.markdown(
+        '<span class="card-tag">Japan</span>'
+        '<span class="card-tag">Content Strategy</span>'
+        '<span class="card-tag">Investment Framework</span>',
+        unsafe_allow_html=True)
+
+    st.markdown("")
     st.link_button("🔗 Dashboard", "https://japan-content-efficiency-6hurjz8iuwotjxug83aqb3.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/japan-content-efficiency", use_container_width=True)
 
 with col3:
     st.markdown("""
-<div class="card-box">
-    <h3>🚀 JP/KR Launch Health Scorecard</h3>
-    <div class="card-desc">Title-level diagnostics for early signal vs. staying power in Japan and Korea Netflix scripted series.</div>
-    <div class="card-question">Question: Which early signals distinguish front-loaded launches from durable performers?</div>
-    <div class="card-bullets">
-        • <strong>14 titles</strong> (7 JP / 7 KR) with weekly trajectory<br>
-        • <strong>3 dimensions:</strong> launch strength, staying power, off-platform<br>
-        • <strong>Rule-based archetypes</strong> from within-market z-scores
-    </div>
-    <div class="card-tags">
-        <span class="card-tag">Japan</span>
-        <span class="card-tag">Korea</span>
-        <span class="card-tag">Launch Diagnostics</span>
-    </div>
+<div class="project-card">
+<h3>🚀 JP/KR Launch Health Scorecard</h3>
+<p>Title-level diagnostics for early signal vs. staying power
+in Japan and Korea Netflix scripted series.</p>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("""
+**Question:** Which early signals distinguish front-loaded launches from durable performers?
+
+- **14 titles** (7 JP / 7 KR) with weekly trajectory
+- **3 dimensions:** launch strength, staying power, off-platform
+- **Rule-based archetypes** from within-market z-scores
+""")
+
+    st.markdown(
+        '<span class="card-tag">Japan</span>'
+        '<span class="card-tag">Korea</span>'
+        '<span class="card-tag">Launch Diagnostics</span>',
+        unsafe_allow_html=True)
+
+    st.markdown("")
     st.link_button("🔗 Dashboard", "https://launch-health-scorecard-mn8yu4pnfclrl8eaujdnny.streamlit.app/", use_container_width=True)
     st.link_button("📦 GitHub", "https://github.com/FruitsPunchSamuraiKai/launch-health-scorecard", use_container_width=True)
 
